@@ -80,11 +80,11 @@ export class MapComponent implements OnInit {
     // Wait a short period before zooming to a designated level
     setTimeout(() => {this.map.setZoom(8);}, 750);
   }
-
-  // https://github.com/darkguy2008/leaflet-angular4-issue/blob/master/src/app.ts
+  
   /**
    * Builds the referenced component so it can be injected into the 
    * leaflet map as popup.
+   * Original code from:  https://github.com/darkguy2008/leaflet-angular4-issue/blob/master/src/app.ts
    */
   private compilePopup(component, onAttach): any {
     const compFactory: any = this.resolver.resolveComponentFactory(component);
